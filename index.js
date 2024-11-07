@@ -1,21 +1,17 @@
 import express from "express";
+import student from "./routes/student.js";
 
 const app = express();
 
-app.get("/student", (req, res) => {
-  res.send("All Students");
-});
+// 1- Create router folder to  put our routes in separate file.
+// 2- Create instanse of express.Router()
+// 3- Insted of app.mthod we use router.Method()
+// 4- Expoert router
+// 5- Import router
+// 6- use the (app.use) buil-in middleware & porvidie your
 
-app.post("/student", (req, res) => {
-  res.send("Add New Students");
-});
+// Route params
 
-app.put("/student", (req, res) => {
-  res.send("Update Student");
-});
-
-app.delete("/student", (req, res) => {
-  res.send("Delete  Students");
-});
+app.use("/student", student);
 
 app.listen(8000, () => console.log("Server Up!"));
