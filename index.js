@@ -1,5 +1,6 @@
 import express from "express";
-import student from "./routes/student.js";
+// import student from "./routes/student.js";
+import products from "./products.js";
 
 const app = express();
 
@@ -12,6 +13,18 @@ const app = express();
 
 // Route params
 
-app.use("/student", student);
+// app.use("/student", student);
+
+//Querly String
+
+// app.get("/product", (req, res) => {
+//   const { category, id } = req.query;
+
+//   res.send(`Procuct Category: ${category} & Product ID: ${id}`);
+// });
+
+app.get("/products", (req, res) => {
+  res.json(products);
+});
 
 app.listen(8000, () => console.log("Server Up!"));
