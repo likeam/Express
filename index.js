@@ -1,8 +1,8 @@
-import express from "express";
+// import express from "express";
 // import student from "./routes/student.js";
-import products from "./products.js";
+// import products from "./products.js";
 
-const app = express();
+// const app = express();
 
 // 1- Create router folder to  put our routes in separate file.
 // 2- Create instanse of express.Router()
@@ -23,8 +23,8 @@ const app = express();
 //   res.send(`Procuct Category: ${category} & Product ID: ${id}`);
 // });
 
-app.get("/products", (req, res) => {
-  res.json(products);
-});
+// app.get("/products", (req, res) => {
+//   res.json(products);
+// });
 
-app.listen(8000, () => console.log("Server Up!"));
+// app.listen(8000, () => console.log("Server Up!"));
